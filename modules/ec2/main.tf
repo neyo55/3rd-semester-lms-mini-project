@@ -15,7 +15,7 @@ resource "tls_private_key" "rsa" {
 # using resource to generate local file for private key 
 resource "local_file" "private_key" {
   content  = tls_private_key.rsa.private_key_pem
-  filename = "key.pem"
+  filename = "key"
 }
 
 # Output the public IP addresses of the instances to a file
